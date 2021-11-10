@@ -1,6 +1,11 @@
 docker build -t sicp .
 docker run -it --rm --name my-sicp sicp
 
+## Calve
+CTRL + SHIFT + P
+Выбрать: Fire up the ”Getting Started” REPL
+Далее исполнение команды ALT + ENTER
+
 ## Устонавка Clojure
 https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows
 
