@@ -9,7 +9,7 @@ https://github.com/v-kolesnikov/sicp
 https://calva.io/connect/
 ctrl+alt+c ctrl+alt+j
 
-## Устанавка
+## Установка
 1. Clojure https://github.com/clojure/tools.deps.alpha/wiki/clj-on-Windows
 2. Leiningen https://leiningen.org/
 3. Calva https://calva.io/
