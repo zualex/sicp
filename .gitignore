@@ -3,4 +3,4 @@
 .clj-kondo
 .lein*
 .nrepl-port
-target
+/target

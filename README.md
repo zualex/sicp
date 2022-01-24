@@ -2,6 +2,8 @@ docker build -t sicp .
 docker run -it --rm --name my-sicp sicp
 
 https://github.com/gregsexton/SICP-Clojure
+https://github.com/v-kolesnikov/sicp
+
 
 ## Repl
 https://calva.io/connect/
