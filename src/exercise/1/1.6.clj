@@ -1,13 +1,5 @@
-(ns exercise.1.1.6)
-
-(defn abs [x]
-  (if (< x 0) (- x) x))
-
-(defn square [x]
-  (* x x))
-
-(defn average [x, y]
-  (/ (+ x y) 2))
+(ns exercise.1.1.6
+  (:require [common :refer [abs square average]]))
 
 (defn improve [guess, x]
   (average guess (/ x guess)))
@@ -25,11 +17,14 @@
   (sqrt-iter 1.0 x))
 
 
-(average 1 2)
 (improve 1.4167, 2)
+;=> 1.41421574
 (good-enough? 1.4142 2)
+; => true
 (sqrt-iter 1.0 2)
+; => 1.41421568
 (sqrt 9)
+; => 3.0000915541
 
 
 (defn new-if [predicate, then-clause, else-clause]
@@ -38,8 +33,9 @@
     :else else-clause))
 
 (new-if (= 2 3) 0 5)
+; => 5
 (new-if (= 1 1) 0 5)
-
+; => 0
 
 (defn sqrt-iter-new-if [guess x]
   (new-if (good-enough? guess x)
@@ -47,7 +43,7 @@
     (sqrt-iter-new-if (improve guess x)
                x)))
 
-;(sqrt-iter-new-if 1.0 2)
-;(sqrt-iter-new-if 2.0 9)
+(sqrt-iter-new-if 1.0 2)
+; => Execution error (StackOverflowError) at java.lang.Number/<init> (REPL:-1)
 
 ; new-if это функция и она сначала вычиляется свои аргументы, в аргументах есть опять вызов sqrt-iter-new-if, то есть попадём в бесконечную рекурсию
