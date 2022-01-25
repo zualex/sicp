@@ -45,5 +45,3 @@
 
 (sqrt-iter-new-if 1.0 2)
 ; => Execution error (StackOverflowError) at java.lang.Number/<init> (REPL:-1)
-
-; new-if это функция и она сначала вычиляется свои аргументы, в аргументах есть опять вызов sqrt-iter-new-if, то есть попадём в бесконечную рекурсию
