@@ -1,11 +1,5 @@
-(defn abs [x]
-  (if (< x 0) (- x) x))
-
-(defn square [x]
-  (* x x))
-
-(defn average [x, y]
-  (/ (+ x y) 2))
+(ns exercise.1.1.7
+  (:require [common :refer [abs average]]))
 
 (defn improve [guess, x]
   (average guess (/ x guess)))
@@ -21,3 +15,4 @@
                x)))
 
 (sqrt-iter 1.0 0.5 0.0001)
+; => 0.010000000025490743
